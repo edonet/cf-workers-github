@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>GitHub 文件加速</title>
+    <link rel="stylesheet" href="./index.css"></link>
+</head>
+
+<body class="flex">
+    <h1 class="title">GitHub 文件加速</h1>
+    <form class="form flex" action="./" method="get" target="_blank" onsubmit="toSubmit(event)">
+        <label class="block" style="width: fit-content">
+            <input
+                class="block url"
+                name="q"
+                type="text"
+                placeholder="请输入文件链接"
+                autocomplete="none"
+                required=""
+                pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob|raw|suites)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$"
+            >
+            <div class="bar"></div>
+        </label>
+        <input class="block btn" type="submit" value="下载">
+    </form>
+    <script>
+        function toSubmit(e) {
+            e.preventDefault()
+            window.open(location.origin + '/' + document.getElementsByName('q')[0].value);
+            return false
+        }
+    </script>
+</body>
+
+</html>

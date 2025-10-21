@@ -1,4 +1,6 @@
 {
+	"include": ["worker-configuration.d.ts", "src/**/*.ts"],
+	"exclude": ["test"],
 	"compilerOptions": {
 		/* Visit https://aka.ms/tsconfig.json to read more about this file */
 
@@ -39,7 +41,5 @@
 		"types": [
 			"./worker-configuration.d.ts"
 		]
-	},
-	"exclude": ["test"],
-	"include": ["worker-configuration.d.ts", "src/**/*.ts"]
+	}
 }
